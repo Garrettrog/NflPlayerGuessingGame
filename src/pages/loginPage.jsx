@@ -8,8 +8,9 @@ const LoginPage = () =>
     const [username, setUsername] = useState('');
     const navigate = useNavigate();
 
-    const handleStart = async () =>
+    const handleStart = async (e) =>
     {
+        e.preventDefault();
         if (!username) {
             alert('Please enter a username');
             return;
@@ -36,8 +37,10 @@ const LoginPage = () =>
                     wins_hof: 0,
                     guesses_current: 4,
                     guesses_hof: 4,
-                    game_status: 'in_progress',
-                    last_played_date: new Date().toISOString().split('T')[0]
+                    game_status_current: 'in_progress',
+                    game_status_hof: 'in_progress',
+                    last_played_date_current: new Date().toISOString().split('T')[0],
+                    last_played_date_hof: new Date().toISOString().split('T')[0]
                 })
                 .select()
                 .single();
@@ -61,14 +64,18 @@ const LoginPage = () =>
     return (
         <div className="auth-container">
             <h1 className="auth-title">Enter a Username</h1>
-            <input
-                type="text"
-                placeholder="Username"
-                value={username}
-                onChange={e => setUsername(e.target.value)}
-                className="auth-input"
+            <form onSubmit={handleStart}>
+                <input
+                    type="text"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    className="auth-input"
             />
-            <button onClick={handleStart} className="auth-button">Start Game</button>
+                <button type="submit" className="auth-button">
+                    Start Game
+                </button>
+            </form>
         </div>
     );
 };
