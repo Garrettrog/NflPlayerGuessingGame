@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 import { useNavigate } from 'react-router-dom';
-import Headshot from '../components/TremaineEdmunds.png';
-import Silhouette from '../components/TremaineEdmundsS.png';
+import Headshot from '../components/PatBryant.png';
+import Silhouette from '../components/PatBryantS.png';
 import { useDailyPlayer } from '../hooks/useDailyPlayerCurrent';
 import { supabase } from '../utils/supabaseClient';
 
@@ -125,7 +125,7 @@ const GamePage = () =>
         <div className="page-layout">
             {/* Left side leaderboard */}
             <div className="leaderboard">
-                <h2>🏆 Cureent-NFL Leaderboard</h2>
+                <h2>🏆 Current-NFL Leaderboard</h2>
                 <ol>
                     {leaderboard.map((user, index) => (
                     <li key={index}>
@@ -190,10 +190,12 @@ const GamePage = () =>
                             <li>Age: {player.age}</li>
                             <li>Draft Year: {player.draft_year}</li>
                             <li>College: {player.college}</li>
-                            <li>Tackles: {player.tackles}</li>
-                            <li>INTs: {player.ints}</li>
-                            <li>Sacks: {player.sacks}</li>
-                            <li>TFLs: {player.tfls}</li>
+                            <li>Receptions: {player.catches}</li>
+                            <li>Receiving Yards: {player.receiving_yards}</li>
+                            <li>Receiving TDs: {player.receiving_tds}</li>
+                            <li>Carries: {player.carries}</li>
+                            <li>Rushing Yards: {player.rushing_yards}</li>
+                            <li>Rushing TDs: {player.rushing_tds}</li>
                         </ul>
                     </div>
                 </div>

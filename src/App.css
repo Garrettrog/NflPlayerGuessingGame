@@ -175,8 +175,8 @@ body
 }
 
 .silhouette-img {
-  width: 300px;
-  height: auto;
+  width: auto;
+  height: 600px;
   filter: drop-shadow(0 0 7px #0ff);
 }
 
@@ -195,7 +195,7 @@ body
   border-radius: 12px;
   box-shadow: 0 0 20px #0ff;
   margin-left: 2rem;
-  width: 500px;
+  width: 400px;
 }
 
 .attribute-title {

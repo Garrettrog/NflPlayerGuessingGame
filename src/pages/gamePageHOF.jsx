@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 import { useNavigate } from 'react-router-dom';
-import Headshot from '../components/AndreJohnson.png';
-import Silhouette from '../components/AndreJohnsonS.png';
+import Headshot from '../components/JaredAllen.png';
+import Silhouette from '../components/JaredAllenS.png';
 import { useDailyPlayer } from '../hooks/useDailyPlayerHOF';
 import { supabase } from '../utils/supabaseClient';
 
@@ -234,12 +234,10 @@ const GamePage = () =>
                             <li>Weight: {player.weight} lbs</li>
                             <li>Years: {player.years_played}</li>
                             <li>College: {player.college}</li>
-                            <li>Receptions: {player.catches}</li>
-                            <li>Receiving Yards: {player.receiving_yards}</li>
-                            <li>Receiving TDs: {player.receiving_tds}</li>
-                            <li>Carries: {player.carries}</li>
-                            <li>Rushing Yards: {player.rushing_yards}</li>
-                            <li>Rushing TDs: {player.rushing_yards}</li>
+                            <li>Tackles: {player.tackles}</li>
+                            <li>Sacks: {player.sacks}</li>
+                            <li>Forced Fumbles: {player.forced_fumbles}</li>
+                            <li>TFLs: {player.tfls}</li>
                         </ul>
                     </div>
                 </div>
