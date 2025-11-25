@@ -182,8 +182,8 @@ body
 
 .player-img
 {
-  width: 300px;
-  height: auto;
+  width: auto;
+  height: 600px;
   filter: drop-shadow(0 0 7px #0ff);
 }
 
@@ -274,4 +274,64 @@ body
 
 .suggestions-list li:hover {
   background: #f0f0f0;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  color: #0ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container {
+  border: 2px solid #0ff;
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  width: 800px;
+}
+
+.login-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgb(0, 213, 255);
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgb(255, 21, 0);
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background: #0ff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #0ff;
+  transition: transform 0.2s ease;
+}
+
+.login-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #0ff;
 }

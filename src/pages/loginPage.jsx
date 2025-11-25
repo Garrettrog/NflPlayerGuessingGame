@@ -62,20 +62,25 @@ const LoginPage = () =>
     };
 
     return (
-        <div className="auth-container">
-            <h1 className="auth-title">Enter a Username</h1>
-            <form onSubmit={handleStart}>
-                <input
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    className="auth-input"
-            />
-                <button type="submit" className="auth-button">
-                    Start Game
-                </button>
-            </form>
+        <div ckassName="page-layout">
+            <div className="login-page">
+                <div className="login-container">
+                    <h1 className="login-title">Daily NFL Player</h1>
+                    <p className="login-subtitle">Enter your username:</p>
+                    <form onSubmit={handleStart}>
+                        <input
+                            type="text"
+                            placeholder="Your Username"
+                            value={username}
+                            onChange={e => setUsername(e.target.value)}
+                            className="login-input"
+                        />
+                        <button onClick={handleStart} className="login-button">
+                            Start Game
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     );
 };
