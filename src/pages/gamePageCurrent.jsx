@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 import { useNavigate } from 'react-router-dom';
-import Headshot from '../components/PatBryant.png';
-import Silhouette from '../components/PatBryantS.png';
+import Headshot from '../components/RickyPearsall.png';
+import Silhouette from '../components/RickyPearsallS.png';
 import { useDailyPlayer } from '../hooks/useDailyPlayerCurrent';
 import { supabase } from '../utils/supabaseClient';
 
